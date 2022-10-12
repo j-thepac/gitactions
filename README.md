@@ -15,6 +15,7 @@ Add yaml here
 - By default all yaml files gets executed in worklow folder
 - Has Python and Docker Pre-Installed 
 - on: [workflow_dispatch] , to trigger manually 
+- Multiple Jobs run by defaukt in parallel
 
 ## Python
 - add "shell: python"
