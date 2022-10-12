@@ -1,0 +1,10 @@
+name: pythontest
+on: [workflow_dispatch]
+jobs:
+  runs-on: [ubuntu-latest]
+  job1:
+    - name: pytest
+      run: |
+        print("hi")
+      shell: python
+    
