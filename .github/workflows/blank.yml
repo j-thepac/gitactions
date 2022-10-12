@@ -1,0 +1,17 @@
+# 1. place it under root/.github/workflows/
+# 2. Workflow > Jobs[VM (runs-on)] > Actions > Steps
+# 3. Events(on) Trigger Worflows
+# "_" instead of "-"
+
+name: Test
+on: [push]
+jobs:
+  myjobname:
+    runs-on: ubuntu-latest
+    steps:
+      - name: echo name
+        run: echo "hi"
+      - name: multi
+        run: |
+          node -v
+          npm -v
