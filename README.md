@@ -14,6 +14,7 @@ Add yaml here
 -  "_" instead of "-"
 - By default all yaml files gets executed in worklow folder
 - Has Python and Docker Pre-Installed 
+- on: [workflow_dispatch] , to trigger manually 
 
 ## Python
 - add "shell: python"
