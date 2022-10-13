@@ -22,7 +22,7 @@ Git Repo > Actions > Ck on Simple Worflow (this automatically creates folder str
 - Dependency "needs: [job_name] "
 
 ## Events (on)
-- [assigned](https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#pull_request)
+- [ref link](https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#pull_request)
 - [push,pull_request]
 - some activites have many activities types
 
@@ -30,7 +30,12 @@ Git Repo > Actions > Ck on Simple Worflow (this automatically creates folder str
         on:
           pull_request:
             types: [closed ,assigned]
+- repository_dispatch (using REST API)
 
+        name:
+        on:
+          repository_dispatch:
+            types: [build]
 
 ## Actions (Functions)
   - Can reference :
