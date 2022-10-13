@@ -1,0 +1,22 @@
+#min hh day-month month day_week
+#* = ANy
+#* * * * *
+# https://crontab.guru/
+
+name: cronjob
+on:
+  schedule:
+    - cron: "1 * * * *"
+    - cron: "3 * * * *"
+   
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      name: test
+      shell: python
+      run: |
+        from datetime import datetime
+        print(datetime.now())
+      
+    
