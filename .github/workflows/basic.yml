@@ -10,8 +10,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: echo name
+        shell: bash
         run: echo "hi"
+        
       - name: multi
+        shell: bash
         run: |
           node -v
           npm -v
