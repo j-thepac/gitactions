@@ -1,0 +1,14 @@
+name: restprintpayload
+on:
+  repository_dispatch:
+    types: [startme]
+   
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: printPayload
+        shell: bash
+        run: echo ${{github.event.client_payload.data}}
+
+
