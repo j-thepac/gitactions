@@ -9,6 +9,6 @@ jobs:
         
       - name: checkfiles
         shell: bash
-        # git checkout git_url  - can be added as well
+        # git clone git_url  - can be added as well
         run: |
           ls
