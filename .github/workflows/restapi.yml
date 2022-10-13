@@ -1,5 +1,4 @@
 
-
 name: rest
 on:
   repository_dispatch:
@@ -14,3 +13,16 @@ jobs:
         run: |
           from datetime import datetime
           print(datetime.now())
+
+
+# url = "https://api.github.com/repos/j-thepac/gitactions/dispatches"
+# payload = "{\n    \"event_type\": \"startme\"\n}"
+# headers = {
+#   'Accept': 'application/vnd.github+json',
+#   'Content': 'application/json',
+#   'Authorization': 'Bearer generate_personal_token',
+#   'Content-Type': 'application/json'
+# }
+# response = requests.request("POST", url, headers=headers, data = payload)
+
+
