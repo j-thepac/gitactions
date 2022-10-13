@@ -16,6 +16,7 @@ Add yaml here
 - Has Python and Docker Pre-Installed 
 - on: [workflow_dispatch] , to trigger manually 
 - Multiple Jobs run by defaukt in parallel
+- Dependency "needs: [job_name] "
 
 ## Python
 - add "shell: python"
