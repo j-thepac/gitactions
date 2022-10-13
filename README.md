@@ -8,8 +8,7 @@ Git Repo > Actions > Ck on Simple Worflow (this automatically creates folder str
 - Add yaml here 
 
 ## Structure 
-- Workflow > Jobs (has 1 VM) >  Steps (name ,command)
-- Workflow > Jobs (has 1 VM) >  Actions ie., functions
+- Workflow > Jobs (has 1 VM) >  Steps (name ,command) ,  Actions ie., functions
 
 ## Rules
 - Events(on) Trigger Worflows
