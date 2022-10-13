@@ -24,6 +24,10 @@ Git Repo > Actions > Ck on Simple Worflow (this automatically creates folder str
 ## Events (on)
 - [ref link](https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#pull_request)
 - [push,pull_request]
+- 
+   name:
+   push:
+        branches: [master,'branch*']
 - some activites have many activities types
 
         name:
