@@ -37,8 +37,8 @@ Git Repo > Actions > Ck on Simple Worflow (this automatically creates folder str
 
 ## Environment Variables
 
-  echo $GITHUB_SHA
-  echo $GITHUB_REPOSITORY
-  echo $GITHUB_WORKSPACE
-  echo "${{github.token}}"
+    echo $GITHUB_SHA
+    echo $GITHUB_REPOSITORY
+    echo $GITHUB_WORKSPACE
+    echo "${{github.token}}"
 
