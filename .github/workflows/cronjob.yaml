@@ -6,8 +6,8 @@
 name: cronjob
 on:
   schedule:
-    - cron: "1 * * * *"
-    - cron: "3 * * * *"
+    - cron: "1 1 * 1 *"
+# - cron: "3 * * * *"
    
 jobs:
   job1:
