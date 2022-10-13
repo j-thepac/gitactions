@@ -78,3 +78,6 @@ Git Repo > Actions > Ck on Simple Worflow (this automatically creates folder str
           key: Value
           
        echo ${{key}}  #access
+## Access Secrets
+
+        echo "${{secrets.KEY}}"
