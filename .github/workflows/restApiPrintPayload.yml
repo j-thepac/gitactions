@@ -9,6 +9,6 @@ jobs:
     steps:
       - name: printPayload
         shell: bash
-        run: echo ${{github.event.inputs.name}}
+        run: echo ${{github.event.client_payload.name}}
 
 
