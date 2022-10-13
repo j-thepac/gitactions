@@ -26,10 +26,10 @@ Git Repo > Actions > Ck on Simple Worflow (this automatically creates folder str
 - [push,pull_request]
 - some activites have many activities types
 
-    name:
-    on:
-      pull_request:
-        types: [closed ,assigned]
+        name:
+        on:
+          pull_request:
+            types: [closed ,assigned]
 
 
 ## Actions (Functions)
