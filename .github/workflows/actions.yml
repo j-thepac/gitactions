@@ -4,18 +4,15 @@ name: actionstest
 on: [workflow_dispatch]
 
 jobs:
-  runs-on: ubuntu-latest
-  steps:
-    - name: simple action
-      id: id1
-      uses: actions/hello-world-javascript-action@v1
-      with:
-        # INPUT
-        who-to-greet: deepak
+  job1: 
+    runs-on: ubuntu-latest
+    steps:
+      - name: simple action
+        id: id1
+        uses: actions/hello-world-javascript-action@v1
+        with:
+          # INPUT
+          who-to-greet: deepak
         
-     - name: print output
-       run: echo "${{steps.id1.outputs.time}}"
-       
-
-    
-
+      - name: print output
+        run: echo "${{steps.id1.outputs.time}}"
