@@ -3,7 +3,7 @@
 name: rest
 on:
   repository_dispatch:
-    types: [build]
+    types: [startme]
    
 jobs:
   job1:
