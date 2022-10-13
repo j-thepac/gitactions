@@ -64,7 +64,7 @@ Git Repo > Actions > Ck on Simple Worflow (this automatically creates folder str
 ## Python
 - add "shell: python"
 
-## Environment Variables
+## GIT Environment Variables
 
     echo $GITHUB_SHA
     echo $GITHUB_REPOSITORY
@@ -72,3 +72,9 @@ Git Repo > Actions > Ck on Simple Worflow (this automatically creates folder str
     #github is an object existing environment
     echo "${{github.token}}"
 
+## Custom Variables
+
+        env:
+          key: Value
+          
+       echo ${{key}}  #access
