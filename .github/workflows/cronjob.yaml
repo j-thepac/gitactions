@@ -1,10 +1,12 @@
-#min hh day-month month day_week
+
 #* = ANy
 #* * * * *
 # https://crontab.guru/
+# minimum is every 5 minutes 
 
 name: cronjob
 on:
+#* * * * * = min hh day-month month day_week
   schedule:
     - cron: "1 1 * 1 *"
 # - cron: "3 * * * *"
