@@ -1,0 +1,16 @@
+
+
+name: rest
+on:
+  repository_dispatch:
+    types: [build]
+   
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: test
+        shell: python
+        run: |
+          from datetime import datetime
+          print(datetime.now())
