@@ -21,6 +21,17 @@ Git Repo > Actions > Ck on Simple Worflow (this automatically creates folder str
 - Multiple Jobs run by default in parallel
 - Dependency "needs: [job_name] "
 
+## Events (on)
+- [assigned](https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#pull_request)
+- [push,pull_request]
+- some activites have many activities types
+
+    name:
+    on:
+      pull_request:
+        types: [closed ,assigned]
+
+
 ## Actions (Functions)
   - Can reference :
     - In Same File
