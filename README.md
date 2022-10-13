@@ -36,6 +36,15 @@ Git Repo > Actions > Ck on Simple Worflow (this automatically creates folder str
         on:
           repository_dispatch:
             types: [build]
+            
+        curl --location --request POST 'https://api.github.com/repos/j-thepac/gitactions/dispatches' \
+        --header 'Accept: application/vnd.github+json' \
+        --header 'Content: application/json' \
+        --header 'Authorization: Bearer generate_personal_token' \
+        --header 'Content-Type: application/json' \
+        --data-raw '{
+            "event_type": "startme"
+        }'
 
 ## Actions (Functions)
   - Can reference :
