@@ -9,12 +9,12 @@ jobs:
         shell: bash
         run: echo "hi"
         
-      - name: checkCondition1
+      - name: checkCondition1_1
         if: ${{ 1==1}}
         run: echo "working"
         
 # success() , failure() , always()
-      - name: checkCondition
-        if: success()
+      - name: checkConditionFailure
+        if: failure()
         shell: bash
-        run: echo "working"
+        run: echo "something has failed"
