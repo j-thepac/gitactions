@@ -12,17 +12,16 @@ jobs:
         
       - name:  run on fail
         shell: bash
-        run: echo "step2"
+        run: echo "run on fail"
         
-   myjobname2:
+  myjobname2:
     runs-on: ubuntu-latest
-
     steps:
-      - name: failed2
+      - name: failed
         shell: bash
         run: eccho "hi"
         
       - name:  run on fail
-        if: failure()
+        if: failure
         shell: bash
-        run: echo "step2_2"
+        run: echo "run on fail 2"
