@@ -12,7 +12,9 @@ jobs:
       
       - name: seeFolders
         shell: bash
-        run: ls -la
+        run: |
+          pwd
+          ls -la
         
       - name: scalatest
         shell: bash
