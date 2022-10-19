@@ -22,6 +22,6 @@ jobs:
         run: eccho "hi"
         
       - name:  run on fail
-        if: failure
+        if: failure()
         shell: bash
         run: echo "run on fail 2"
