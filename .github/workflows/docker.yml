@@ -9,6 +9,10 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v1
+      
+      - name: seeFolders
+        shell: bash
+        run: ls -la
         
       - name: scalatest
         shell: bash
