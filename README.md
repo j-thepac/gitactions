@@ -60,6 +60,9 @@ Git Repo > Actions > Ck on Simple Worflow (this automatically creates folder str
     - "uses: account/repo_name@branch"
     - "uses: account/repo_name@v1"
     - "uses: account/repo_name@commit"
+  - With : Provide input
+         with:
+          varName: value
 
 ## Python
 - add "shell: python"
