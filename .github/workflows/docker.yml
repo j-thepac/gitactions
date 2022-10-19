@@ -16,5 +16,5 @@ jobs:
         
       - name: scalatest
         shell: bash
-        run: scala /.github/workflows/test.scala
+        run: scala .github/workflows/test.scala
             
