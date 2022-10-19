@@ -1,0 +1,20 @@
+name: ifcondition
+on: [workflow-dispatch]
+jobs:
+  myjobname:
+    runs-on: ubuntu-latest
+    if: github.event_name== 'workflow-dispatch'
+    steps:
+      - name: echo name
+        shell: bash
+        run: echo "hi"
+        
+      - name: checkCondition1
+        if: ${{ 1==1}}
+        run: echo "working"
+        
+# success() , failure() , always()
+      - name: checkCondition
+        if: success()
+        shell: bash
+        run: echo "working"
