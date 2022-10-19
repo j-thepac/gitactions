@@ -1,9 +1,9 @@
 name: ifcondition
-on: [workflow-dispatch]
+on: [workflow_dispatch]
 jobs:
   myjobname:
     runs-on: ubuntu-latest
-    if: github.event_name== 'workflow-dispatch'
+    if: github.event_name== 'workflow_dispatch'
     steps:
       - name: echo name
         shell: bash
