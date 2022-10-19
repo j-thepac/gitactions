@@ -1,0 +1,28 @@
+
+name: flow
+on: [workflow_dispatch]
+jobs:
+  myjobname:
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    steps:
+      - name: failed
+        shell: bash
+        run: eccho "hi"
+        
+      - name:  run on fail
+        shell: bash
+        run: echo "step2"
+        
+   myjobname2:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: failed2
+        shell: bash
+        run: eccho "hi"
+        
+      - name:  run on fail
+        if: failure()
+        shell: bash
+        run: echo "step2_2"
