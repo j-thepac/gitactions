@@ -9,6 +9,7 @@ jobs:
     steps:
       - name: scalatest
         shell: bash
+      - uses: actions/checkout:v1
         run: |
           scala
           'print("hi")'
