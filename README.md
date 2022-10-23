@@ -94,3 +94,9 @@ Git Repo > Actions > Ck on Simple Worflow (this automatically creates folder str
 - Upload Code Coverage as Artifact
 - Cache Dependencies
 - On Failure , Send message , Mail
+
+## CODEOWNERS
+- create file CODEOWNERS
+
+        * @usernsme
+        *.py @usrname 
