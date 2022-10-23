@@ -85,3 +85,10 @@ Git Repo > Actions > Ck on Simple Worflow (this automatically creates folder str
 ## Access Secrets
 
         echo "${{secrets.KEY}}"
+
+## Workflow
+- install Dependencies
+- Check code Formatting
+- Run Automatd Tests
+- Upload Code Coverage as Artifact
+- Cache Dependencies
