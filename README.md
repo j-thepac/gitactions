@@ -89,6 +89,7 @@ Git Repo > Actions > Ck on Simple Worflow (this automatically creates folder str
 ## Workflow
 - install Dependencies
 - Check code Formatting
+- Build Project if Necessary
 - Run Automatd Tests
 - Upload Code Coverage as Artifact
 - Cache Dependencies
