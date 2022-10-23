@@ -93,3 +93,4 @@ Git Repo > Actions > Ck on Simple Worflow (this automatically creates folder str
 - Run Automatd Tests
 - Upload Code Coverage as Artifact
 - Cache Dependencies
+- On Failure , Send message , Mail
