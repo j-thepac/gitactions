@@ -30,6 +30,9 @@ Git Repo > Actions > Ck on Simple Worflow (this automatically creates folder str
 - Workflow > Jobs (VM) >  Steps > command ,  Actions(functions)
 
 ## Rules
+- All Jobs in a file run parallely by default
+- To create sequence
+        - Dependency "needs: [job_name] "
 - Workflows run inside git-hosted / self-hosted Vm
 - By Default the current repository is not checked out.
 - Events ("on") =   Trigger Worflows
@@ -37,8 +40,7 @@ Git Repo > Actions > Ck on Simple Worflow (this automatically creates folder str
 - By default all yaml files gets executed in worklow folder
 - Vm has Python and Docker Pre-Installed 
 - on: [workflow_dispatch] , to trigger manually 
-- Multiple Jobs run by default in parallel
-- Dependency "needs: [job_name] "
+
 
 ## Events (on)
 - [ref link](https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#pull_request)
@@ -107,9 +109,11 @@ Git Repo > Actions > Ck on Simple Worflow (this automatically creates folder str
         echo "${{secrets.KEY}}"
 
 ## Basic Steps in a Workflow
+- Set Up Env
+- Checkout Code
 - install Dependencies
-- Check code Formatting
-- Build Project if Necessary
+- Verify Formatting
+- (Build Project if Necessary)
 - Run Automatd Tests
 - Upload Code Coverage as Artifact
 - Cache Dependencies
