@@ -1,5 +1,6 @@
 # Rules
 Format
+
         name: Test
         on: [workflow_dispatch]
         jobs:
@@ -9,6 +10,7 @@ Format
                 - name: test 2
                   run: echo "test2"
 Json Equivalent
+
         {
             "name": "Test",
             "on": ["workflow_dispatch"],
