@@ -1,7 +1,7 @@
-name: Test
+name: basic2
 on: [workflow_dispatch]
 jobs:
-  myjobname:
+  jobbasic2:
     runs-on: ubuntu-latest
     steps:
       - run: echo "hi"
