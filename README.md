@@ -6,7 +6,7 @@ Format
         jobs:
             job1:
                 - run: echo "test"
-                - run: echo "test2"
+                - uses: actions/checkout@v3
 Json Equivalent
 
         { "name": "Test",
@@ -14,7 +14,7 @@ Json Equivalent
            "jobs": {
                 "job1": [
                     {"run": "echo \"test\""},
-                    {"run": "echo \"test2\""}
+                    {"uses": "actions/checkout@v3"}
                 ]}
         }
                   
