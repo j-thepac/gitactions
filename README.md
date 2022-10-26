@@ -86,7 +86,7 @@ Git Repo > Actions > Ck on Simple Worflow (this automatically creates folder str
 
         echo "${{secrets.KEY}}"
 
-## Workflow
+## Basic Steps in a Workflow
 - install Dependencies
 - Check code Formatting
 - Build Project if Necessary
