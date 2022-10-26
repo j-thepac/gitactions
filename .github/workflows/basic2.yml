@@ -1,0 +1,14 @@
+name: Test
+on: [push]
+jobs:
+  myjobname:
+    runs-on: ubuntu-latest
+    steps:
+        run: echo "hi"
+        
+        shell: bash
+        run: |
+          node -v
+          npm -v
+        
+        run: echo "done"
