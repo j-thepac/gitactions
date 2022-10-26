@@ -27,15 +27,15 @@ Git Repo > Actions > Ck on Simple Worflow (this automatically creates folder str
 - Add yaml here 
 
 ## Structure 
-- Workflow > Jobs (has 1 VM) >  Steps (name ,command) ,  Actions ie., functions
+- Workflow > Jobs (VM) >  Steps > command ,  Actions(functions)
 
 ## Rules
 - Workflows run inside git-hosted / self-hosted Vm
 - By Default the current repository is not checked out.
-- Events(on) Trigger Worflows
+- Events ("on") =   Trigger Worflows
 -  "_" instead of "-"
 - By default all yaml files gets executed in worklow folder
-- Has Python and Docker Pre-Installed 
+- Vm has Python and Docker Pre-Installed 
 - on: [workflow_dispatch] , to trigger manually 
 - Multiple Jobs run by default in parallel
 - Dependency "needs: [job_name] "
@@ -53,6 +53,7 @@ Git Repo > Actions > Ck on Simple Worflow (this automatically creates folder str
            branches: [master,'branch*']
           pull_request:
             types: [closed ,assigned]
+            
 - repository_dispatch (using REST API)
 
         name:
