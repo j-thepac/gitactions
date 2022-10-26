@@ -1,8 +1,26 @@
 # Rules
 ## Things to remember:
 1. Format
+2. Events
+3. Jobs
+4. Steps vs Actions
+5. Steps-
+   1.  Change Shell
+   2.  Run Commands - python , shell
+   3.  Run Git string operations
+   4.  Use Variables  
+   5.  Use sh file 
+6. Actions
+   1. Call Jobs in same File
+   2. Call External Actions with paramters   
+7. Use Git Secrets
+8. Rest API
+9. Docker
+   1. Create env and run scala file
+10. Create Complete Workflow (refer pythonCI.yml)
 
-##Format
+
+## Format
 
         name: Test
         on: [workflow_dispatch]
