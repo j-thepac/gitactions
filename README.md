@@ -16,6 +16,7 @@ Refer /.github/workflows/ for code
 6. Actions
    1. Call Jobs in same File
    2. Call External Actions with paramters   
+   3. Use Result of Action into Another
 7. Use Git Secrets
 8. Rest API
 9. Docker
