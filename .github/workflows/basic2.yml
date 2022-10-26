@@ -1,14 +1,10 @@
 name: Test
-on: [push]
+on: [workflow_dispatch]
 jobs:
   myjobname:
     runs-on: ubuntu-latest
     steps:
-        run: echo "hi"
-        
-        shell: bash
-        run: |
-          node -v
-          npm -v
-        
-        run: echo "done"
+      - run: echo "hi"
+      - run: echo "bye"
+
+      
