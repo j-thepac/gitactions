@@ -49,7 +49,7 @@ jobs:
         echo hello > path/to/artifact/world.txt
     
     - name: 6. Upload Code Coverage as Artifact
-    - uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v3
       with:
         name: my-artifact
         path: path/to/artifact/world.txt
