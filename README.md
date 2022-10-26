@@ -5,21 +5,16 @@ Format
         on: [workflow_dispatch]
         jobs:
             job1:
-                - name: test
-                  run: echo "test"
-                - name: test 2
-                  run: echo "test2"
+                - run: echo "test"
+                - run: echo "test2"
 Json Equivalent
 
-        {
-            "name": "Test",
-            "on": ["workflow_dispatch"],
-            "jobs": {
+        { "name": "Test",
+           "on": ["workflow_dispatch"],
+           "jobs": {
                 "job1": [
-                    {"name": "test",
-                      "run": "echo \"test\""},
-                    {"name": "test 2",
-                     "run": "echo \"test2\""}
+                    {"run": "echo \"test\""},
+                    {"run": "echo \"test2\""}
                 ]}
         }
                   
