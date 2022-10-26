@@ -57,7 +57,8 @@ jobs:
 #Google search: actions/cache@v3
 #key : stores hash of dependencies , OS etc., to track changes and retrived right dependecies
 
-    - uses: 7. actions/cache@v3
+    - name: 7. Cache Dependencies
+      uses: actions/cache@v3
       with:
         path: ~/.cache/pip
         key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
