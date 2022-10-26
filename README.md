@@ -8,8 +8,9 @@
    1.  Change Shell
    2.  Run Commands - python , shell
    3.  Run Git string operations
-   4.  Use Variables  
-   5.  Use sh file 
+   4.  if Condition
+   5.  Use Variables  
+   6.  Use sh file 
 6. Actions
    1. Call Jobs in same File
    2. Call External Actions with paramters   
