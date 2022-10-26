@@ -1,5 +1,8 @@
 # Rules
-Format
+## Things to remember:
+1. Format
+
+##Format
 
         name: Test
         on: [workflow_dispatch]
