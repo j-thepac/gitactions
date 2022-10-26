@@ -1,6 +1,6 @@
 # Rules
 ## Things to remember :
-Refer .github/workflows/ for code 
+Refer /.github/workflows/ for code 
 1. Format
 2. Events
 3. Jobs
