@@ -2,7 +2,7 @@ name: pythontest
 on: [workflow_dispatch]
 
 jobs:
-  job1:
+  pythonjob:
     runs-on: [ubuntu-latest]    
     steps:
     - name: pytest
