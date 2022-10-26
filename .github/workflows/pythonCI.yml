@@ -42,4 +42,23 @@ jobs:
         
     - name: 5. Run Automatd Tests
       run: |
-        pytest
+        #pytest
+        mkdir -p path/to/artifact
+        echo hello > path/to/artifact/world.txt
+    
+    - name: 6. Upload Code Coverage as Artifact
+    - uses: actions/upload-artifact@v3
+      with:
+        name: my-artifact
+        path: path/to/artifact/world.txt
+
+#https://github.com/actions/cache/blob/main/examples.md#python---pip
+#Google search: actions/cache@v3
+#key : stores hash of dependencies , OS etc., to track changes and retrived right dependecies
+
+    - uses: 7. actions/cache@v3
+      with:
+        path: ~/.cache/pip
+        key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+        restore-keys: |
+          ${{ runner.os }}-pip-
