@@ -1,4 +1,26 @@
 # Rules
+Format
+        name: Test
+        on: [workflow_dispatch]
+        jobs:
+            job1:
+                - name: test
+                  run: echo "test"
+                - name: test 2
+                  run: echo "test2"
+Json Equivalent
+        {
+            "name": "Test",
+            "on": ["workflow_dispatch"],
+            "jobs": {
+                "job1": [
+                    {"name": "test",
+                      "run": "echo \"test\""},
+                    {"name": "test 2",
+                     "run": "echo \"test2\""}
+                ]}
+        }
+                  
 ## Create WorkFlow
 #### Method 1:
 Git Repo > Actions > Ck on Simple Worflow (this automatically creates folder structure)
