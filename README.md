@@ -7,7 +7,7 @@ Refer /.github/workflows/ for code
 4. Steps vs Actions
 5. Steps-
    1.  Change Shell
-   2.  Run Commands - python , shell
+   2.  Run - python , shell
    3.  Run Git string operations
    4.  if Condition
    5.  Use Variables  
