@@ -7,6 +7,7 @@ jobs:
     steps:
       - name: echo name
         shell: bash
+        # git hub string operations
         run: |
           echo ${{ contains( 'hello' ,'o')}}
           echo ${{ startsWith( 'hello' ,'o')}}
