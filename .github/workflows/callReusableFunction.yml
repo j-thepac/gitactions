@@ -9,4 +9,4 @@ jobs:
     with:
       test_name: "test"
     secrets:
-      password: "123
+      password: "123"
