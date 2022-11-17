@@ -1,10 +1,26 @@
 name: ifcondition
 on: [workflow_dispatch]
+
+
 jobs:
   myjobname:
     runs-on: ubuntu-latest
+    env:
+      global: 1
     if: github.event_name== 'workflow_dispatch'
+    
+    
     steps:
+      - name: global Test
+        if: ${{global}} == 1
+        run: echo "Global Working"
+
+      - name: local Test
+        env:
+          local: 2
+        if: ${{local}} == 2
+        run: echo "local Working"
+
       - name: echo name
         shell: bash
         run: echo "hi"
