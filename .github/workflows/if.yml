@@ -12,7 +12,7 @@ jobs:
     
     steps:
       - name: global Test
-        if: ${{global}} == 1
+        if: ${{myjobname.global}} == 1
         run: echo "Global Working"
 
       - name: local Test
