@@ -12,13 +12,13 @@ jobs:
     
     steps:
       - name: global Test
-        if: $global == 1
+        if: ${{env.global}} == 1
         run: echo "Global Working"
 
       - name: local Test
         env:
           local: 2
-        if: $local == 2
+        if: ${{env.local}} == 2
         run: echo "local Working"
 
       - name: echo name
