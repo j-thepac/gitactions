@@ -1,13 +1,16 @@
 
-
-#example -- uses: n3wt0n/ReusableWorkflow/.github/workflows/buildAndPublishDockerImage.yml@main
-#job_name:
-#   uses: USER_OR_ORG_NAME/REPO_NAME/.github/workflows/REUSABLE_WORKFLOW_FILE.yml@TAG_OR_BRANCH
-#   with:
-#     var_name: value
-#   secrets:
-#     password: ${{secrets.REGISTRY_USERNAME}}
-
+#----------------------CALL REUSEABLE FUNCTION --------------------
+# # URL =  https://github.com/j-thepac/gitactions/blob/main/.github/workflows/reusablefunctions.yml
+# name: CallReusableFn
+# on: [workflow_dispatch]
+# jobs:                   
+#   calljob:
+#     uses: j-thepac/gitactions/.github/workflows/reusablefunctions.yml@main
+#     with:
+#       test_name: "test"
+#     secrets:
+#       password: "123"
+# ---------------------------------------------------------------------
 
 
 name: Reusable Function
@@ -28,5 +31,5 @@ jobs:
     steps:
       - name: Print
         run: |
-          echo ${{ inputs.test_name }}
+          echo ""${{ inputs.test_name }}
   
