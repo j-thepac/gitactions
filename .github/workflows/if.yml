@@ -13,13 +13,15 @@ jobs:
     steps:
       - name: global Test
         if: ${{env.global}} == 1
-        run: echo "Global Working"
+        run: |
+          echo "Global Working: "${{env.global}}
 
       - name: local Test
         env:
           local: 2
         if: ${{env.local}} == 2
-        run: echo "local Working"
+        run: |
+          echo "local Working:" ${{env.local}}
 
       - name: echo name
         shell: bash
