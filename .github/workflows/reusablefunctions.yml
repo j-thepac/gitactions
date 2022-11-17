@@ -1,0 +1,32 @@
+
+
+#example -- uses: n3wt0n/ReusableWorkflow/.github/workflows/buildAndPublishDockerImage.yml@main
+#job_name:
+#   uses: USER_OR_ORG_NAME/REPO_NAME/.github/workflows/REUSABLE_WORKFLOW_FILE.yml@TAG_OR_BRANCH
+#   with:
+#     var_name: value
+#   secrets:
+#     password: ${{secrets.REGISTRY_USERNAME}}
+
+
+
+name: Reusable Function
+
+on:
+  workflow_call:
+    inputs:
+      test_name:
+        required: true
+        type: string
+    secrets:
+      password:
+        required: true
+
+jobs:
+  fn:
+    runs-on: ubuntu-latest 
+    steps:
+      - name: Print
+        run: |
+          echo ${{ inputs.test_name }}
+  
