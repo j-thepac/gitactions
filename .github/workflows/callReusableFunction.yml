@@ -1,0 +1,13 @@
+https://github.com/j-thepac/gitactions/blob/main/.github/workflows/reusablefunctions.yml
+
+name: Test
+on: [[workflow_dispatch]
+jobs:                   
+#   example -- uses: n3wt0n/ReusableWorkflow/.github/workflows/buildAndPublishDockerImage.yml@main
+  job_name:
+    uses: j-thepac/gitactions/.github/workflows/reusablefunctions.yml
+    with:
+      test_name: "test"
+    secrets:
+      password: "123
+        
