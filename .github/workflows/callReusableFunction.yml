@@ -5,7 +5,7 @@ on: [workflow_dispatch]
 jobs:                   
 #   example -- uses: n3wt0n/ReusableWorkflow/.github/workflows/buildAndPublishDockerImage.yml@main
   calljob:
-    uses: j-thepac/gitactions/.github/workflows/reusablefunctions.yml
+    uses: j-thepac/gitactions/.github/workflows/reusablefunctions.yml@main
     with:
       test_name: "test"
     secrets:
