@@ -1,5 +1,5 @@
 ---
-name: deploy-to-dev-testing.yml
+name: SynapseMasterRefreshHashiCOrp.yml
 
 on: [workflow_dispatch]
 
@@ -15,7 +15,7 @@ jobs:
     env:
       SN_WORKSPACE: kynsight-dev-cca-weu-syn-01
       RESOURCEGROUP: rg-cdo-kynsight-dev-weu-001
-      SUBSCRIPTIONID: 0482d4e6-19e6-4955-8af3-3eb7a14379ac
+      SUBSCRIPTIONID: ccc
       VAULT_PATH: infra/data/azure/synapse/kynsight-cca/sp
 
     steps:
