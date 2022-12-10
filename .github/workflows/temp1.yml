@@ -1,11 +1,11 @@
 name: temp1
-on: [workflow-dispatch]
+on: [workflow_dispatch]
 
-job:
+jobs:
   j1:
-    runs-on: 
+    runs-on: [ubuntu-latest]
     steps:
-      name: s1
-      shell: python
-      run: |
-        print("hi")
+      - name: s1
+        shell: python
+        run: |
+          print("hi")
