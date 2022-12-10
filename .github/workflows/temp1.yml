@@ -1,0 +1,11 @@
+name: temp1
+on: [workflow-dispatch]
+
+job:
+  j1:
+    runs-on: 
+    steps:
+      name: s1
+      shell: python
+      run: |
+        print("hi")
