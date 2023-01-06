@@ -11,21 +11,32 @@ jobs:
   myjobname:
     runs-on: ubuntu-latest
     steps:
+#-------------- Basic ---------------    
       - name: echo name
         shell: bash
         run: echo "hi"
         
-      - name: multi
+      - name: multiLine
         shell: bash
         run: |
           node -v
           npm -v
           
+#------ git clone git_url  - can be added as well-------
       - name: call function gitcheckout_action
         uses: actions/checkout@v1
-        
-      - name: checkfiles
+      
+      - name: checkout files verify 
         shell: bash
-        # git clone git_url  - can be added as well
         run: |
           ls
+ #--------------Exteranl Function with Args --------------- 
+      - name: simple action
+        id: id1
+        uses: actions/hello-world-javascript-action@v1
+        with:
+          # INPUT
+          who-to-greet: deepak
+        
+      - name: print output
+        run: echo "${{steps.id1.outputs.time}}"
