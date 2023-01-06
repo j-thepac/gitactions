@@ -31,12 +31,12 @@ jobs:
         run: |
           ls
  #--------------Exteranl Function with Args --------------- 
-      - name: simple action
+      - name: simple function with Args
         id: id1
         uses: actions/hello-world-javascript-action@v1
         with:
           # INPUT
           who-to-greet: deepak
         
-      - name: print output
+      - name: print output of Pervious Step
         run: echo "${{steps.id1.outputs.time}}"
