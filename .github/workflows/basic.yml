@@ -4,7 +4,9 @@
 # "_" instead of "-"
 
 name: Test
-on: [push]
+on: [workflow_dispatch]
+#[push]
+
 jobs:
   myjobname:
     runs-on: ubuntu-latest
@@ -18,3 +20,12 @@ jobs:
         run: |
           node -v
           npm -v
+          
+      - name: call function gitcheckout_action
+        uses: actions/checkout@v1
+        
+      - name: checkfiles
+        shell: bash
+        # git clone git_url  - can be added as well
+        run: |
+          ls
