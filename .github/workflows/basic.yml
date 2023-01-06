@@ -5,7 +5,13 @@
 
 name: basic
 on: [workflow_dispatch]
-#[push]
+
+#   [push]
+#   schedule:
+#     - cron: "1 1 * 1 *" ie., min hh day_month month day_week Eg:"3 * * * *"
+
+
+
 
 jobs:
   basicjob1:
@@ -21,6 +27,12 @@ jobs:
         run: |
           node -v
           npm -v
+          
+      - name: python
+        shell: python
+        run: |
+          from datetime import datetime
+          print(datetime.now())
           
 #------ git clone git_url  - can be added as well-------
       - name: call function gitcheckout_action
