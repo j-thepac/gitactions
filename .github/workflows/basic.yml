@@ -8,7 +8,7 @@ on: [workflow_dispatch]
 #[push]
 
 jobs:
-  myjobname:
+  basicjob1:
     runs-on: ubuntu-latest
     steps:
 #-------------- Basic ---------------    
