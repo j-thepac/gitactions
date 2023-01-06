@@ -53,3 +53,25 @@ jobs:
         
       - name: print output of Pervious Step
         run: echo "${{steps.id1.outputs.time}}"
+
+
+
+
+  basicjob2-SCALA_DOCKER:
+    runs-on: ubuntu-latest
+    container:
+      image: broadinstitute/scala-baseimage:latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v1
+        #git clone 
+      
+      - name: seeFolders
+        shell: bash
+        run: |
+          pwd
+          ls -la
+        
+      - name: scalatest
+        shell: bash
+        run: scala .github/workflows/test.scala
