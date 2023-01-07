@@ -50,8 +50,9 @@ jobs:
         uses: actions/checkout@v1
               #git clone git_url
 
-      - name: checkout files verify 
+      - name: verify checkout files
         shell: bash
+        # git clone git_url  - can be added as well
         run: |
           ls
  #-------------- Call Exteranl Function with Args --------------- 
