@@ -9,13 +9,17 @@ on: [workflow_dispatch]
 #   [push]
 #   schedule:
 #     - cron: "1 1 * 1 *" ie., min hh day_month month day_week Eg:"3 * * * *"
-
+env:
+  global: Value
 
 
 
 jobs:
   basicjob1:
     runs-on: ubuntu-latest
+    env:
+      jobVar: Valuelocal
+      
     steps:
 #-------------- Basic ---------------    
       - name: echo name
@@ -33,6 +37,15 @@ jobs:
         run: |
           from datetime import datetime
           print(datetime.now())
+ #-------------- Variables --------------- 
+      - name: Variables
+        shell: bash
+        env: 
+          stepVar: step
+        run: |
+          echo "${global}"
+          echo "${jobVar}"
+          echo "${stepVar}"  
           
 #-------------- Call Exteranl Function -------
       - name: call function gitcheckout_action
