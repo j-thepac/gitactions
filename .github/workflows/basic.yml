@@ -5,14 +5,12 @@
 
 name: basic
 on: [workflow_dispatch]
-
 #   [push]
 #   schedule:
 #     - cron: "1 1 * 1 *" ie., min hh day_month month day_week Eg:"3 * * * *"
+
 env:
   global: Value
-
-
 
 jobs:
   basicjob1:
