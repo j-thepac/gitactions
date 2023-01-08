@@ -12,14 +12,15 @@ on: [workflow_dispatch]
 env:
   global: Value
 
+
 jobs:
+
   basicjob1:
     runs-on: ubuntu-latest
     env:
       jobVar: Valuelocal
       
     steps:
-#-------------- Basic ---------------    
       - name: echo name
         shell: bash
         run: echo "hi"
