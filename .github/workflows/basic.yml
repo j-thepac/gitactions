@@ -44,7 +44,12 @@ jobs:
           echo "${global}"
           echo "${jobVar}"
           echo "${stepVar}"  
-  
+        
+ #-------------- if --------------- 
+      - name: if
+        if: ${{ 1==1}}
+        run: echo "working"
+        
 #-------------- Call Exteranl Function -------
       - name: call function gitcheckout_action
         uses: actions/checkout@v1
@@ -100,7 +105,7 @@ jobs:
         run: echo '${{ toJSON(matrix) }}'
         
 
-  basicjob2-SCALA_DOCKER:
+  basicjob2-DOCKER:
     runs-on: ubuntu-latest
     container:
       image: broadinstitute/scala-baseimage:latest
