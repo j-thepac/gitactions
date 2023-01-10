@@ -58,7 +58,7 @@ jobs:
         run: echo "working"
         
 #------- Call Exteranl Function -------
-      - name: call function gitcheckout_action
+      - name: call function
         uses: actions/checkout@v1
               #git clone git_url
 
@@ -67,8 +67,8 @@ jobs:
         # git clone git_url -alternate
         run: |
           ls
- #------- Call Exteranl Function with Args --------------- 
-      - name: simple function with Args
+ #------- Call Exteranl Fn with Args ----------- 
+      - name: function with Args
         id: id1
         uses: actions/hello-world-javascript-action@v1
         with:
@@ -86,9 +86,9 @@ jobs:
         shell: bash
         # git hub string operations
         run: |
-          echo ${{contains('hello','o')}}
-          echo ${{startsWith('hello','o')}}
-          echo ${{endsWith('hello','o')}}
+          echo ${{contains('hi','i')}}
+          echo ${{startsWith('ho','h')}}
+          echo ${{endsWith('hi','i')}}
           echo ${{format('Hello{0}{1}','A','B')}}
           echo ${{join('["csharp",l"javascript"]', ',' )}}
           
