@@ -46,28 +46,28 @@ jobs:
           echo "${jobVar}"
           echo "${stepVar}"  
  
-#-------------- secrets --------------- 
+#--------- secrets --------------- 
       - name: secret test
         shell: bash
         run: |
           echo "${{secrets.KEY}}"
           
- #-------------- if --------------- 
+ #---------- if --------------- 
       - name: if
         if: ${{ 1==1}}
         run: echo "working"
         
-#-------------- Call Exteranl Function -------
+#------- Call Exteranl Function -------
       - name: call function gitcheckout_action
         uses: actions/checkout@v1
               #git clone git_url
 
       - name: verify checkout files
         shell: bash
-        # git clone git_url  - can be added as well
+        # git clone git_url -alternate
         run: |
           ls
- #-------------- Call Exteranl Function with Args --------------- 
+ #------- Call Exteranl Function with Args --------------- 
       - name: simple function with Args
         id: id1
         uses: actions/hello-world-javascript-action@v1
@@ -86,27 +86,27 @@ jobs:
         shell: bash
         # git hub string operations
         run: |
-          echo ${{ contains( 'hello' ,'o')}}
-          echo ${{ startsWith( 'hello' ,'o')}}
-          echo ${{ endsWith( 'hello' ,'o')}}
-          echo ${{ format('Hello {0} {1}' ,'A','B')}}
-          echo ${{ join( '["csharp", "javascript"]', ',' )}}
+          echo ${{contains('hello','o')}}
+          echo ${{startsWith('hello','o')}}
+          echo ${{endsWith('hello','o')}}
+          echo ${{format('Hello{0}{1}','A','B')}}
+          echo ${{join('["csharp",l"javascript"]', ',' )}}
           
       - name: Dump GitHub context
         id: github_context_step
-        run: echo '${{ toJSON(github) }}'
+        run: echo '${{toJSON(github)}}'
         
       - name: Dump job context
-        run: echo '${{ toJSON(job) }}'
+        run: echo '${{toJSON(job)}}'
         
       - name: Dump steps context
-        run: echo '${{ toJSON(steps) }}'
+        run: echo '${{toJSON(steps)}}'
         
       - name: Dump runner context
-        run: echo '${{ toJSON(runner) }}'
+        run: echo '${{toJSON(runner)}}'
         
       - name: Dump strategy context
-        run: echo '${{ toJSON(strategy) }}'
+        run: echo '${{toJSON(strategy)}}'
         
       - name: Dump matrix context
         run: echo '${{ toJSON(matrix) }}'
