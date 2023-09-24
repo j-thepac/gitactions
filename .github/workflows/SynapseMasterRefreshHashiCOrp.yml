@@ -13,10 +13,10 @@ jobs:
       run:
         shell: bash    
     env:
-      SN_WORKSPACE: kynsight-dev-cca-weu-syn-01
-      RESOURCEGROUP: rg-cdo-kynsight-dev-weu-001
+      SN_WORKSPACE: my_workspace
+      RESOURCEGROUP: my_resource
       SUBSCRIPTIONID: ccc
-      VAULT_PATH: infra/data/azure/synapse/kynsight-cca/sp
+      VAULT_PATH: my_infra/data/azure/synapse/kynsight-cca/sp
 
     steps:
 
@@ -27,7 +27,7 @@ jobs:
         method: approle
         roleId: ${{ secrets.VAULT_ROLE_ID }}
         secretId: ${{ secrets.VAULT_SECRET_ID }}
-        namespace: kyndryl/CDO-Kynsight
+        namespace: kyndryl/my_namespace
         secrets: |
           ${{ env.VAULT_PATH }} clientId      | CLIENT_ID;
           ${{ env.VAULT_PATH }} clientSecret  | CLIENT_SECRET;
