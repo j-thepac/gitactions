@@ -1,0 +1,10 @@
+name: test
+on: [workflow_disptach]
+
+jobs:
+  runs-on:[ubuntu-latest]
+  job1:
+    name: Step1
+    shell: bash
+    run: |
+     echo "hi"
