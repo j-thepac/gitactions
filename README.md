@@ -36,9 +36,9 @@ Refer /.github/workflows/ for code
                     run: |
                      echo "Test"
             job2:
-                - uses: yml_link@branch
-                - with
-                   arg1: "a"
+             - uses: yml_link@branch
+             - with
+                arg1: "a"
                   
 ## Create WorkFlow
 #### Method 1:
