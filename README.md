@@ -63,7 +63,8 @@ Git Repo > Actions > Ck on Simple Worflow (this automatically creates folder str
 - Events  Eg: on: [workflow_dispatch] #manual , [push]
 -  "_" instead of "-"
 - By default all yaml files gets executed in worklow folder
-- Vm has Python and Docker Pre-Installed 
+- Vm has Python and Docker Pre-Installed
+- Has Docker Installed 
 
 
 
