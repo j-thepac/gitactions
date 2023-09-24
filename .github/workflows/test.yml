@@ -11,4 +11,4 @@ jobs:
           - name: A
             shell: bash
             run: |
-             echo ${{a}}
+             echo ${{inputs.a}}
