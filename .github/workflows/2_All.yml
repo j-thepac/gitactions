@@ -12,9 +12,7 @@ on: [workflow_dispatch]
 env:
   global: Value
 
-
 jobs:
-
   basicjob1:
     runs-on: ubuntu-latest
     env:
@@ -45,18 +43,15 @@ jobs:
           echo "${global}"
           echo "${jobVar}"
           echo "${stepVar}"  
- 
 #--------- secrets --------------- 
       - name: secret test
         shell: bash
         run: |
-          echo "${{secrets.KEY}}"
-          
+          echo "${{secrets.KEY}}"        
  #---------- if --------------- 
       - name: if
         if: ${{ 1==1}}
         run: echo "working"
-        
 #------- Call Exteranl Function -------
       - name: call function
         uses: actions/checkout@v1
@@ -111,7 +106,6 @@ jobs:
       - name: Dump matrix context
         run: echo '${{ toJSON(matrix) }}'
         
-
   basicjob3-DOCKER:
     runs-on: ubuntu-latest
     container:
@@ -130,8 +124,6 @@ jobs:
       - name: scalatest
         shell: bash
         run: scala .github/workflows/test.scala
-
-
 
   basicjob4-errorhandle1:
     runs-on: ubuntu-latest
