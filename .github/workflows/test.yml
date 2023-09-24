@@ -5,6 +5,6 @@ jobs:
     runs-on: [ubuntu-latest]
     steps:
       - name: t1
-      - shell: python
-      - run: |
+        shell: python
+        run: |
           print("hi")
