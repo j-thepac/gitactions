@@ -8,7 +8,7 @@
 # Cache Dependencies
 # On Failure , Send message , Mail
 
-name: PythonCI
+name: 3_PythonCI
 on: [workflow_dispatch]
 permissions:
   contents: read
