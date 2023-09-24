@@ -23,25 +23,21 @@ Refer /.github/workflows/ for code
    1. Create env and run scala file
 10. Create Complete Workflow (refer pythonCI.yml)
 
-
-## Format
+## Format 1 (Call Function)
 
         name: Test
         on: [workflow_dispatch]
         jobs:
             job1:
+                - name: A
+                - shell: bash
+                - run: |
+                   echo "hi"
+            job2:
                 - run: echo "test"
-                - uses: actions/checkout@v3
-Json Equivalent
-
-        { "name": "Test",
-           "on": ["workflow_dispatch"],
-           "jobs": {
-                "job1": [
-                    {"run": "echo \"test\""},
-                    {"uses": "actions/checkout@v3"}
-                ]}
-        }
+                - uses: yml_link@branch
+                - with
+                   arg1: "a"
                   
 ## Create WorkFlow
 #### Method 1:
