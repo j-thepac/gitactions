@@ -3,7 +3,7 @@
 # 3. Events(on) Trigger Worflows
 # "_" instead of "-"
 
-name: 1_basic
+name: 2_All
 on: [workflow_dispatch]
 #   [push]
 #   schedule:
