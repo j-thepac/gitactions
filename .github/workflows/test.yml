@@ -7,4 +7,4 @@ jobs:
           - name: A
             shell: bash
             run: |
-             echo "hi"
+             echo "Test"
