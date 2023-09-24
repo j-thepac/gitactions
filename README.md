@@ -60,11 +60,11 @@ Git Repo > Actions > Ck on Simple Worflow (this automatically creates folder str
         - Dependency "needs: [job_name] "
 - Workflows run inside git-hosted / self-hosted Vm
 - By Default the current repository is not checked out.
-- Events (ie., on keyword) =   Used for Worflows types
+- Events  Eg: on: [workflow_dispatch] #manual , [push]
 -  "_" instead of "-"
 - By default all yaml files gets executed in worklow folder
 - Vm has Python and Docker Pre-Installed 
-- on: [workflow_dispatch] , to trigger manually 
+
 
 
 ## Events (on)
