@@ -1,5 +1,9 @@
 name: Test
-on: [workflow_dispatch]
+on: 
+    workflow_call:
+        inputs:
+            a: 
+              type: string
 jobs:
     job1:
        runs-on: [ubuntu-latest]
@@ -7,4 +11,4 @@ jobs:
           - name: A
             shell: bash
             run: |
-             echo "Test"
+             echo ${{a}}
