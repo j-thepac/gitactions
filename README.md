@@ -29,10 +29,12 @@ Refer /.github/workflows/ for code
         on: [workflow_dispatch]
         jobs:
             job1:
-                - name: A
-                - shell: bash
-                - run: |
-                   echo "hi"
+               runs-on: [ubuntu-latest]
+               steps:
+                  - name: A
+                    shell: bash
+                    run: |
+                     echo "hi"
             job2:
                 - uses: yml_link@branch
                 - with
