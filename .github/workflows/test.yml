@@ -1,10 +1,10 @@
-name: test
+name: Test
 on: [workflow_dispatch]
 jobs:
-  job1:
-    runs-on: [ubuntu-latest]
-    steps:
-      - name: t1
-        shell: python
-        run: |
-          print("hi")
+    job1:
+       runs-on: [ubuntu-latest]
+       steps:
+          - name: A
+            shell: bash
+            run: |
+             echo "hi"
