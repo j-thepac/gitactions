@@ -1,6 +1,6 @@
 # https://github.com/j-thepac/gitactions/blob/main/.github/workflows/reusablefunctions.yml
 
-name: 4_1_Reusable_Function
+name: 4_2_Reusable_Function
 on: [workflow_dispatch]
 jobs:                   
 #   example -- uses: n3wt0n/ReusableWorkflow/.github/workflows/buildAndPublishDockerImage.yml@main
