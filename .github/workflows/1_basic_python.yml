@@ -1,4 +1,4 @@
-name: basic_python
+name: 1_basic_python
 on: [workflow_dispatch]
 
 jobs:
