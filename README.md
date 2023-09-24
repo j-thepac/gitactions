@@ -13,7 +13,7 @@ Refer /.github/workflows/ for code
    5.  Use Variables  
    6.  Use sh file 
    7.  Error handling
-6. Actions
+6. Actions (Functions)
    1. Call Jobs in same File
    2. Call External Actions with paramters   
    3. Use Result of Action into Another
