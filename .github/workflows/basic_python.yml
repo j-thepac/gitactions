@@ -1,4 +1,4 @@
-name: temp1
+name: basic_python
 on: [workflow_dispatch]
 
 jobs:
