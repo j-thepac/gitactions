@@ -1,10 +1,11 @@
 name: test
-on: [workflow_disptach]
+on: [workflow_dispatch]
 
 jobs:
-  runs-on:[ubuntu-latest]
   job1:
-    name: Step1
-    shell: bash
-    run: |
-     echo "hi"
+    runs-on: [ubuntu-latest]
+    steps:
+      - name: test
+        shell: bash
+        run: |
+          echo "hi"
