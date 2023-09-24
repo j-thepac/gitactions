@@ -40,7 +40,13 @@ jobs:
       with:
         node-version: 16        
 
-    - name: Publishing in ${{ env.SN_WORKSPACE }}
+    # New ARM Templates will be generated and Saved in below path 
+    # Saved path can be seen in Actions >  Logs > after this yaml file is run
+    # --------Sample Run------------
+    # Stdout:  LocalFileUtils: Saving file: /runner/_work/CIO-CPQ-Analytics/CIO-CPQ-Analytics/ExportedArtifacts/TemplateForWorkspace.json
+    # Stdout:  LocalFileUtils: Saving file: /runner/_work/CIO-CPQ-Analytics/CIO-CPQ-Analytics/ExportedArtifacts/TemplateParametersForWorkspace.json
+    # --------
+    - name: Create ARM Templates and Publishing in ${{ env.SN_WORKSPACE }}
       uses: Azure/Synapse-workspace-deployment@V1.7.0
       with:
         TargetWorkspaceName: ${{ env.SN_WORKSPACE }}
