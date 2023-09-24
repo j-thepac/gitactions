@@ -34,7 +34,7 @@ Refer /.github/workflows/ for code
                   - name: A
                     shell: bash
                     run: |
-                     echo "hi"
+                     echo "Test"
             job2:
                 - uses: yml_link@branch
                 - with
