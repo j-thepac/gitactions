@@ -87,7 +87,8 @@ Git Repo > Actions > Ck on Simple Worflow (this automatically creates folder str
         on:
           repository_dispatch:
             types: [startme]
-            
+
+        # in Postman / curl      
         curl --location --request POST 'https://api.github.com/repos/j-thepac/gitactions/dispatches' \
         --header 'Accept: application/vnd.github+json' \
         --header 'Content: application/json' \
