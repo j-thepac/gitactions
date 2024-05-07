@@ -1,0 +1,31 @@
+# Generate Release notes on Issue Created
+
+name: 6_ReleaseNotes
+on:
+  issue_comment:
+    type:
+      - created
+jobs:
+  j1:
+    runs-on: [ubuntu-latest]
+    steps:
+      - name: Check if comment as '/approved in it and title of the issue starts with 'U'
+        if: ${{ startsWith(github.event.comment.body, '/approved') && startsWith(github.event.issue.title, 'U') && !github.event.issue.pull_request }}
+        shell: python
+        run: |
+          print("hi")
+          
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
+        with:
+          tag_name: ${{ github.ref }}
+          release_name: Release ${{ github.ref }}
+          body: |
+            Changes in this Release
+            - First Change
+            - Second Change
+          draft: false
+          prerelease: false
