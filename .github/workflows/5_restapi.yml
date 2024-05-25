@@ -8,15 +8,16 @@ jobs:
   job1:
     runs-on: ubuntu-latest
     steps:
-      - name: test
-        shell: python
-        run: |
-          from datetime import datetime
-          print(datetime.now())
+        - run: echo  ${{ github.event.client_payload.message }}
 
 # --------Python ---
 # url = "https://api.github.com/repos/j-thepac/gitactions/dispatches"
-# payload = "{\n    \"event_type\": \"startme\"\n}"
+# payload = json.dumps({
+#   "event_type": "startme",
+#   "client_payload": {
+#     "message": "Some Message"
+#   }
+# })
 # headers = {
 #   'Accept': 'application/vnd.github+json',
 #   'Content': 'application/json',
@@ -26,14 +27,16 @@ jobs:
 # response = requests.request("POST", url, headers=headers, data = payload)
 #-----------
 
-#------curl------
-#   curl --location --request POST 'https://api.github.com/repos/j-thepac/gitactions/dispatches' \
-#   --header 'Accept: application/vnd.github+json' \
-#   --header 'Content: application/json' \
-#   --header 'Authorization: Bearer generate_personal_token' \
-#   --header 'Content-Type: application/json' \
-#   --data-raw '{
-#       "event_type": "startme"
-#   }'
+# curl --location --request POST 'https://api.github.com/repos/j-thepac/gitactions/dispatches' \
+# --header 'Accept: application/vnd.github+json' \
+# --header 'Content: application/json' \
+# --header 'Authorization: Bearer <token>' \
+# --header 'Content-Type: application/json' \
+# --data-raw '{
+#   "event_type": "startme",
+#   "client_payload": {
+#     "message": "Some Message"
+#   }
+# }'
 
 
