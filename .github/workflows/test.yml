@@ -1,9 +1,13 @@
 name: Test
 on: 
-    workflow_call:
+    workflow_dispatch:
         inputs:
             a: 
               type: string
+
+env:
+  token: ${{ secrets.gitToken }}
+
 jobs:
     job1:
        runs-on: [ubuntu-latest]
@@ -12,3 +16,9 @@ jobs:
             shell: bash
             run: |
              echo ${{inputs.a}}
+
+            shell: python
+            run: |
+              import os
+              print(len(os.system("token")))
+             
