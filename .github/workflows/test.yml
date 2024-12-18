@@ -16,7 +16,8 @@ jobs:
             shell: bash
             run: |
              echo ${{inputs.a}}
-
+             
+          - name: python
             shell: python
             run: |
               import os
