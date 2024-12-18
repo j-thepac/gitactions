@@ -6,7 +6,7 @@ on:
               type: string
 
 env:
-  token: ${{ secrets.TOKEN }}
+  token: ${{ secrets.KEY }}
 
 jobs:
     job1:
