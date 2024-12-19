@@ -37,4 +37,4 @@ jobs:
       - name: Run Python
         shell: python
         run: |
-          print("hi")
+          os.getenv['name']
