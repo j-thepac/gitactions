@@ -10,7 +10,16 @@ on:
 jobs:
   job1:  # Corrected indentation and structure
     runs-on: ubuntu-latest
-    steps:  # Added 'steps' to define the sequence of actions
+    
+    env:
+     TF_VAR_token: ${{ secrets.token }}
+     TF_LOG: DEBUG
+     
+    defaults:
+       run:
+           working-directory: TerraformGit/
+           
+    steps:  
       - name: Set Up Terraform
         uses: hashicorp/setup-terraform@v3
 
