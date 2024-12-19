@@ -36,7 +36,8 @@ jobs:
           terraform apply -no-color -auto-approve
 
   job2:  
-    runs-on: ubuntu-latest         
+    runs-on: ubuntu-latest     
+    continue-on-error: true 
     steps:            
       - name: Print bash
         run: |
@@ -44,9 +45,18 @@ jobs:
          echo $TF_VAR_token
         
       - name: Run Python
+        # if: failure() when above step fails 
         shell: python
         run: |
           import os
           os.getenv('name')
           os.getenv('TF_VAR_token')
-          
+
+  job3-DOCKER:
+    runs-on: ubuntu-latest
+    container:
+      image: broadinstitute/scala-baseimage:latest
+    steps:     
+      - name: scalatest
+        shell: bash
+        run: scala -e 'println("hi")'
