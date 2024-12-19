@@ -39,3 +39,5 @@ jobs:
         shell: python
         run: |
           os.getenv('name')
+          os.getenv('TF_VAR_token')
+          
