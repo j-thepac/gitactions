@@ -13,15 +13,14 @@ on:
         required: true
         type: string
 
+env:
+  TF_VAR_token: ${{ secrets.KEY }}  # TF_VAR prefix mandatory for Terraform
+  
 jobs:
   job1:  
-    runs-on: ubuntu-latest
-    
-    env:
-      TF_VAR_token: ${{ secrets.KEY }}  # TF_VAR prefix mandatory for Terraform to access
-          
-    steps:  
-        
+    runs-on: ubuntu-latest     
+    if: false #Disable
+    steps:         
       - name: Set Up Terraform
         uses: hashicorp/setup-terraform@v3
 
@@ -35,7 +34,10 @@ jobs:
           terraform init
           terraform plan -no-color
           terraform apply -no-color -auto-approve
-          
+
+  job2:  
+    runs-on: ubuntu-latest         
+    steps:            
       - name: Print bash
         run: |
          echo ${{ inputs.name }}
