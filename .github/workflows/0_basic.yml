@@ -1,6 +1,12 @@
 name: All
+
 on:
   workflow_dispatch:  # Manual Trigger 
+    inputs:
+      name:
+        required: true
+        type: string
+        
   workflow_call:      # Function
     inputs:
       name:
@@ -12,32 +18,40 @@ jobs:
     runs-on: ubuntu-latest
     
     env:
-     TF_VAR_token: ${{ secrets.token }} 
-     #TF_VAR pre-fix mandatory for Terraform to access
-     TF_LOG: DEBUG
+      TF_VAR_token: ${{ secrets.token }}  # TF_VAR prefix mandatory for Terraform to access
+      TF_LOG: DEBUG
      
     defaults:
-       run:
-           working-directory: TerraformGit/
-           
+      run:
+        working-directory: TerraformGit/
+        
     steps:  
-      - name: Set Up Terraform
-        uses: hashicorp/setup-terraform@v3
-
-      - name: Checkout Repo
+      - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Terraform Commands
-        run: |
-          cd Terraform  # Change directory to Terraform
-          terraform fmt -check
-          terraform init
-          terraform plan -no-color
-          terraform apply -no-color -auto-approve
+      - name: Print Environment Input
+        run: echo "Deploying to environment: ${{ inputs.name }}"
 
-      - name: Run Python
-        shell: python
-        run: |
-          os.getenv('name')
-          os.getenv('TF_VAR_token')
+      # - name: Print Global Variable
+      #   run: echo "Global Variable: $TF_VAR_token"
+        
+      # - name: Set Up Terraform
+      #   uses: hashicorp/setup-terraform@v3
+
+      # - name: Checkout Repo
+      #   uses: actions/checkout@v4
+
+      # - name: Terraform Commands
+      #   run: |
+      #     cd Terraform  # Change directory to Terraform
+      #     terraform fmt -check
+      #     terraform init
+      #     terraform plan -no-color
+      #     terraform apply -no-color -auto-approve
+
+      # - name: Run Python
+      #   shell: python
+      #   run: |
+      #     os.getenv('name')
+      #     os.getenv('TF_VAR_token')
           
