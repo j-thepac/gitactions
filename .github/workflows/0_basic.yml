@@ -21,9 +21,9 @@ jobs:
       TF_VAR_token: ${{ secrets.key }}  # TF_VAR prefix mandatory for Terraform to access
       TF_LOG: DEBUG
      
-    defaults:
-      run:
-        working-directory: Terraform/
+    # defaults:
+    #   run:
+    #     working-directory: Terraform/
         
     steps:  
         
@@ -34,6 +34,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Terraform Commands
+        working-directory: Terraform/
         run: |
           cd Terraform  # Change directory to Terraform
           terraform fmt -check
