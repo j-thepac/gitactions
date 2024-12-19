@@ -44,6 +44,7 @@ jobs:
       - name: Run Python
         shell: python
         run: |
+          import os
           os.getenv('name')
           os.getenv('TF_VAR_token')
           
