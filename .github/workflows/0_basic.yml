@@ -1,7 +1,7 @@
 name: All
 on:
-  workflow_dispatch:  # Corrected syntax for workflow_dispatch
-  workflow_call:
+  workflow_dispatch:  # Manual Trigger 
+  workflow_call:      # Function
     inputs:
       name:
         required: true
