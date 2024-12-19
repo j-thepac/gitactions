@@ -23,8 +23,8 @@ provider "github" {
 
 locals {
   repos = {
-    c1 = { desc = "description1 created using Terraform" },
-    c2 = { desc = "description2 created using Terraform" }
+    c3 = { desc = "description1 created using Terraform" },
+    c4 = { desc = "description2 created using Terraform" }
   }
 }
 resource "github_repository" "example" {
