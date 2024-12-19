@@ -1,4 +1,11 @@
-# Rules
+# GitActions
+## Summary
+The Action created runs in VM called Runner .
+1. A VM is spun up with any OS
+2. The current Repo is checked out
+3. Git retreives passwords from secrets stored in repo
+4. Does necessary operstions like - Build , Deploy , Update , Test ,Validate , Notify etc.,
+   
 ## Things to remember :
 Refer /.github/workflows/ for code 
 1. Format
