@@ -1,3 +1,8 @@
+# terraform fmt -check
+# terraform init
+# terraform plan -no-color
+# terraform apply -no-color -auto-approve
+
 terraform {
   required_providers {
     github = {
@@ -7,14 +12,25 @@ terraform {
   }
 }
 
+variable "token" {
+  type      = string
+  sensitive = true
+}
 provider "github" {
-  token = "your_personal_access_token"
-  owner = "your_github_username_or_org"
+  token = var.token
+  owner = "j-thepac"
 }
 
+locals {
+  repos = {
+    c1 = { desc = "description1 created using Terraform" },
+    c2 = { desc = "description2 created using Terraform"" }
+  }
+}
 resource "github_repository" "example" {
-  name        = "my-new-repo"
-  description = "This is my new GitHub repository created using Terraform"
-  visibility  = "private"
-  auto_init   = true
+  for_each = local.repos
+
+  name        = each.key
+  description = each.value.desc
+  visibility  = "public"
 }
