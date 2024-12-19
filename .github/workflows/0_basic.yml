@@ -41,11 +41,10 @@ jobs:
     steps:            
       - name: Print bash
         run: |
-         echo ${{ inputs.name }}
+         echo ${{ inputs.name }} # evaluate git exp
          echo $TF_VAR_token
         
       - name: Run Python
-        # if: failure() when above step fails 
         shell: python
         run: |
           import os
