@@ -28,12 +28,6 @@ jobs:
     steps:  
       - name: Checkout Repository
         uses: actions/checkout@v4
-
-      - name: Print Environment Input
-        run: echo ${{ inputs.name }}
-
-      - name: Print Global Variable
-        run: echo "Global Variable: $TF_VAR_token"
         
       - name: Set Up Terraform
         uses: hashicorp/setup-terraform@v3
@@ -48,7 +42,12 @@ jobs:
           terraform init
           terraform plan -no-color
           terraform apply -no-color -auto-approve
-
+          
+      - name: Print bash
+        run: |
+         echo ${{ inputs.name }}
+         echo $TF_VAR_token
+        
       - name: Run Python
         shell: python
         run: |
