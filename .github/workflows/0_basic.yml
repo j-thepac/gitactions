@@ -34,7 +34,6 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Terraform Commands
-        working-directory: Terraform/
         run: |
           cd Terraform  # Change directory to Terraform
           terraform fmt -check
