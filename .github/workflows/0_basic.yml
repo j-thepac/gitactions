@@ -1,6 +1,8 @@
 name: 0_basic
 
 on:
+  #repository_dispatch [API trigger]
+  #[push] 
   workflow_dispatch:  # Manual Trigger 
     inputs:
       name:
@@ -51,13 +53,11 @@ jobs:
           os.getenv('name')
           os.getenv('TF_VAR_token')
           
-      - name: Run a command
+      - name: githubEvent
         id: id1
         if: github.event_name == 'workflow_dispatch'
         run: echo "workflow_dispatch"
         
-      - name: print output of Pervious Step
-        run: echo "${{steps.id1.outputs.time}}" 
 
   job3-DOCKER:
     runs-on: ubuntu-latest
