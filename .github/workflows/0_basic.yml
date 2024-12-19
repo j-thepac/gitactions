@@ -19,12 +19,7 @@ jobs:
     
     env:
       TF_VAR_token: ${{ secrets.KEY }}  # TF_VAR prefix mandatory for Terraform to access
-      TF_LOG: DEBUG
-     
-    # defaults:
-    #   run:
-    #     working-directory: Terraform/
-        
+          
     steps:  
         
       - name: Set Up Terraform
