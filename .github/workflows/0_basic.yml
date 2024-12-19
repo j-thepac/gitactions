@@ -50,6 +50,11 @@ jobs:
           import os
           os.getenv('name')
           os.getenv('TF_VAR_token')
+          
+      - name: Run a command
+        if: github.event_name == 'workflow_dispatch'
+        run: echo "workflow_dispatch"
+     
 
   job3-DOCKER:
     runs-on: ubuntu-latest
@@ -59,3 +64,4 @@ jobs:
       - name: scalatest
         shell: bash
         run: scala -e 'println("hi")'
+
