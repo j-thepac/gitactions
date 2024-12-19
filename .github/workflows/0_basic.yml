@@ -12,7 +12,8 @@ jobs:
     runs-on: ubuntu-latest
     
     env:
-     TF_VAR_token: ${{ secrets.token }}
+     TF_VAR_token: ${{ secrets.token }} 
+     #TF_VAR pre-fix mandatory for Terraform to access
      TF_LOG: DEBUG
      
     defaults:
