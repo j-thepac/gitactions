@@ -1,23 +1,33 @@
 name: All
 on:
-  workflow-dispatch
-
+  workflow_dispatch:  # Corrected syntax for workflow_dispatch
   workflow_call:
     inputs:
       name:
         required: true
         type: string
+
 jobs:
-  runs-on: ubuntu-latest
-  job1:
-    uses: hashicorp/setup-terraform@v3
-    uses: actions/checkout@v4
-    working-directory: Terraform/
-    run: |
-      terraform fmt -check
-      terraform init
-      terraform plan -no-color
-      terraform apply -no-color -auto-approve
-    shell: python
-    run: |
-        print("hi")
+  job1:  # Corrected indentation and structure
+    runs-on: ubuntu-latest
+    steps:  # Added 'steps' to define the sequence of actions
+      - name: Set Up Terraform
+        uses: hashicorp/setup-terraform@v3
+
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+        # Use 'with' for specifying parameters
+        # Use 'path' the path for checkout
+
+      - name: Terraform Commands
+        run: |
+          cd Terraform  # Change directory to Terraform
+          terraform fmt -check
+          terraform init
+          terraform plan -no-color
+          terraform apply -no-color -auto-approve
+
+      - name: Run Python
+        shell: python
+        run: |
+          print("hi")
